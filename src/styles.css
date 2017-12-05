@@ -1,0 +1,336 @@
+/* You can add global styles to this file, and also import other style files */
+/* Master Styles */
+.remove-text-decoration{
+    text-decoration: none !important;
+  }
+  
+  .isShow{
+    visibility: visible !important;
+  }
+  
+  .isHidden{
+    visibility: hidden; 
+  }
+  
+  .footer{
+    background-color: #ff7a00;
+    color: #fff;
+    /* height: 15vh; */
+    text-align: center;
+  }
+  
+  h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+  }
+  h2, h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  
+  body {
+    /*margin: 2em;*/
+  }
+  
+  .row{
+    margin: 0 !important;
+  }
+  
+  .col{
+    padding: 0 !important;
+  }
+  
+  .padding0{
+    padding: 0 !important;
+  }
+  
+  .margin0{
+    margin: 0 !important;
+  }
+  
+  .center{
+    justify-content:center !important;
+    align-content: center !important;
+    display: inline-flex;
+    /*display: flex;*/
+    align-items: center !important;
+  }
+  
+  .vertical-center{
+    align-content: center !important;
+    align-items: center !important;
+    display: inline-flex;
+  }
+  
+  .mouse-focus{
+    color: #fff;
+  }
+  
+  .mouse-focus:hover{
+    color: #ff7a00;
+  }
+  
+  .backgroundScale {
+      background-size: cover !important;
+      background-position: center !important; 
+      background-repeat: no-repeat !important;
+  }
+  
+  .subHeaderScreen{
+    height: 30vw;
+  }
+  
+  .heightFullscreen{
+    height: 100vh;
+  }
+  
+  .widthFullscreen{
+    width:100vw;
+  }
+  
+  /*header*/
+  .circle-phone{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+  }
+  
+  .circle-phone-inner{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0.8;
+      background-color:#ff7a00;
+      display: none;
+  }
+  
+  .fa-phone-color{
+      color: #ff7a00;
+  }
+  
+  .circle-phone:hover .circle-phone-inner {
+      display: inline-flex;
+      /*align-items: center*/
+  }
+  
+  .circle-phone:hover .fa-phone-color{
+      color: #fff;
+  }
+  /*header*/
+  
+  /*font-awesome css*/
+  .fa:hover{
+    cursor: pointer;
+  }
+  
+  .fa-home{
+    color: #fff;
+  }
+  .fa-home:hover{
+    color: #ff7a00;
+  }
+  
+  .fa-search{
+    color: #fff;
+  }
+  .fa-search:hover{
+    color: #ff7a00;
+  }
+  
+  .fa-sign-out{
+    color: #fff;
+  }
+  .fa-sign-out:hover{
+    color: #ff7a00;
+  }
+  /*font-awesome css*/
+  
+  /*navigation css*/
+  .navbtn {
+    background:black;
+    display:block;
+    width: 66px;
+    height: 66px;
+    opacity: 0.7;
+    position: fixed;
+    z-index: 2000;
+    top: 52px;
+    left: 0px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .nav-icon {
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 18px 0px 0 18px;
+  }
+  
+  .nav-icon span {
+    display: block;
+    position: absolute;
+    height: 2.5px;
+    background: white;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    width: 100%;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .burger-bar1 {
+    top: 2px;
+    transition: 0.5s ease-in-out;
+  }
+  .burger-bar2 {
+    top: 13px;
+    transition: 1s ease-in-out;
+    animation: burgerbarpulse 1s infinite alternate;
+  }
+  .burger-bar3 {
+    top: 24px;
+    transition: 0.5s ease-in-out; }
+  
+  
+  .navbtn:hover .burger-bar2 {
+    transition: 1s ease-in-out;
+    opacity: 0;
+  }
+  .navbtn:hover .burger-bar1 {
+    transform: rotate(45deg) translate(4px, 1px) scaleX(0.8);
+  }
+  .navbtn:hover .burger-bar3 {
+    transform: rotate(-45deg) translate(4px, -1px) scaleX(0.8);
+  }
+  
+  .navbtn:hover span {
+    background: #ff7a00;
+  }
+  
+  .navbtn:hover, .navbtn--active  {
+    transition: 0.5s ease-in-out;
+  }
+  .navbtn--active span  {
+    background: #ff7a00;
+  }
+  
+  .navbtn.navbtn--active .burger-bar1 {
+    transform: rotate(45deg) translate(8px, 8px) scaleX(1.2);
+  }
+  .navbtn.navbtn--active .burger-bar2 {
+    opacity: 0;
+  }
+  .navbtn.navbtn--active .burger-bar3 {
+    transform: rotate(-45deg)  translate(7px, -8px) scaleX(1.2);
+  }
+  
+  
+  .navbtn.navbtn--active:hover .burger-bar1 {
+    transform: rotate(45deg) translate(10px, 16px) scaleX(0.8);
+  }
+  .navbtn.navbtn--active:hover .burger-bar3 {
+    transform: rotate(-45deg)  translate(10px, -16px) scaleX(0.8);
+  }
+  /*navigation css*/
+  
+  /*animation*/
+  .animated { 
+      animation-duration: 2s; 
+      animation-fill-mode: both; 
+      /*animation-iteration-count:infinite; */
+  } 
+  
+  .animated-quick { 
+      animation-duration: 1s; 
+      animation-fill-mode: both; 
+      /*animation-iteration-count:infinite; */
+  } 
+  
+  .delay-1{
+      animation-delay: 1s; /* W3C 和 Opera */
+      -moz-animation-delay: 1s; /* Firefox */
+      -webkit-animation-delay: 1s; /* Safari 和 Chrome */
+  }
+  
+  .delay-500{
+      animation-delay: 500ms; 
+      -moz-animation-delay: 500ms; 
+      -webkit-animation-delay: 500ms; 
+  }
+  
+  @keyframes slideInDown { 
+      0% { 
+          transform: translate3d(0, -100%, 0); 
+          visibility: visible; 
+      } 
+      100% { 
+          transform: translate3d(0, 0, 0); 
+      } 
+  } 
+  .slideInDown { 
+      animation-name: slideInDown; 
+  }
+  
+  @keyframes slideInUp { 
+      0% { 
+          visibility: visible; 
+          transform: translate3d(0, 100%, 0); 
+      } 
+      100% { 
+          transform: translate3d(0, 0, 0); 
+      } 
+  } 
+  .slideInUp { 
+      animation-name: slideInUp; 
+  }
+  
+  @keyframes rotateInDownLeft { 
+      0% { 
+          transform-origin: left bottom; 
+          transform: rotate(-90deg); 
+          opacity: 0; 
+      } 
+      100% { 
+          transform-origin: left bottom; 
+          transform: rotate(0); 
+          opacity: 1; 
+      } 
+  } 
+  .rotateInDownLeft { 
+      animation-name: rotateInDownLeft; 
+  }
+  
+  @keyframes slideInLeft { 
+      0% { 
+          transform: translate3d(-100%, 0, 0); 
+          visibility: visible; 
+      } 
+      100% { 
+          transform: translate3d(0, 0, 0); 
+      } 
+  } 
+  .slideInLeft { 
+      animation-name: slideInLeft; 
+  }
+  
+  @keyframes slideOutLeft { 
+      0% { 
+          transform: translate3d(0, 0, 0); 
+      } 
+      100% { 
+          visibility: hidden; 
+          transform: translate3d(-100%, 0, 0); 
+      } 
+  } 
+  .slideOutLeft { 
+      animation-name: slideOutLeft; 
+  }
+  
+  /*animation*/
+  
+  
+  

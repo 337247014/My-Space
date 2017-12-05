@@ -1,0 +1,260 @@
+<navigation></navigation>
+
+<div class="row">
+    <div class="col-md-12 padding0">
+        <!--home header-->
+        <div class="heightFullscreen backgroundScale" style="position:relative;background-image: url('assets/content/images/home-header.jpg')">
+
+            <!--header-->
+            <div class="animated slideInDown" style="text-decoration: none;position: relative; float: left; left: 8%;top: 5%;">
+                <!--<img src="/app/content/images/logo1.png" style="width: 160px;"/>-->
+                <a href="mailto:my@qq.com?subject=This%20is%20the%20subject" style="text-decoration: none;">
+                    <div class="backgroundScale circle-phone" style="background-image: url('assets/content/images/me.JPG');">
+                        <div class="circle-phone-inner center">
+                            <div>
+                                <i class="fa fa-envelope-open fa-4x fa-phone-color" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="animated slideInDown" style="position: relative; float: right; right: 12%;top: 5%;" >
+                <a [routerLink]="['/home']" data-toggle="tooltip" data-placement="bottom" title="Home"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="animated slideInDown delay-1" style="position: relative; float: right;right:5%;top: 5%;">
+                <!--<i class="fa fa-search fa-2x" aria-hidden="true"></i>-->
+                <a [routerLink]="['/login']" data-toggle="tooltip" data-placement="bottom" title="Sign out"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+            </div>
+
+            <!--My Home Tile-->
+            <!--<div class="row justify-content-center">
+              <div class="col-4 col-md-auto">
+                  <h4 style="color: white">{{title}}</h4>
+              </div>
+          </div>-->
+            <div class="center" style="width: 100%;margin-top: 5%;">
+                <h4 class="animated rotateInDownLeft" style="color: white">{{title}}</h4>
+            </div>
+
+            <!--content-->
+            <div class="animated slideInUp" style="position: absolute;float: left;left: 8%; bottom: 10%;width: 60%;">
+                <h3 class="" style="color: #fff;">Welcome</h3>
+                <p class="animated slideInUp delay-1" style="color: #fff;">this is my space, which will record my personal learn and konwledge</p>
+            </div>
+
+            <!--scroll down to exploer-->
+            <div class="animated slideInUp" href="#card" style="position: absolute;float: right;bottom: 10%;right: 10%" (click)="gotoScroll()">
+                <div class="vertical-center mouse-focus" style="cursor: pointer;">
+                    <i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i>
+                    <span style="font-weight: bold;margin-left: 10px;">SCROLL DOWN <br />TO EXPLORE</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!--cards part1-->
+        <div class="row" name="tileCard" id="tileCard">
+            <div class="col-md-3 padding0">
+                <!--Guildlines-->
+                <div class="card-wrapper animated slideInUp" style="height: 33.333vh;width: 100%;">
+                    <div class="backgroundScale back-image-transition width-height-100" style="background-image: url('assets/content/images/home/1.jpg');"></div>
+                    <div class="center card-content width-height-100">
+                        <h4 style="color:#fff;">Guildlines</h4>
+                    </div>
+
+                    <div class="center card-rollover width-height-100">
+                        <button type="button" class="btn btn-primary cards-button">
+                              <div class="vertical-center">
+                                   <span style="margin-right: 8px;">VIER AREA</span>
+                                   <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </div>
+                      </button>
+                    </div>
+                </div>
+
+                <!--card 2-->
+                <div class="card-wrapper animated slideInUp" style="height: 33.333vh;width: 100%;">
+                    <div class="backgroundScale back-image-transition width-height-100" style="background-image: url('assets/content/images/home/6.jpg')"></div>
+                    <div class="center card-content width-height-100">
+                        <h4 style="color:#fff;">Card 2</h4>
+                    </div>
+
+                    <div class="center card-rollover1 width-height-100">
+                        <button type="button" class="btn btn-primary cards-button">
+                              <div class="vertical-center">
+                                   <span style="margin-right: 8px;">VIER AREA</span>
+                                   <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </div>
+                      </button>
+                    </div>
+                </div>
+
+                <!--card 3-->
+                <div class="card-wrapper animated slideInUp" style="height: 33.333vh;width: 100%;">
+                    <div class="backgroundScale back-image-transition width-height-100" style="background-image: url('assets/content/images/home/4.jpg');"></div>
+                    <div class="center card-content width-height-100">
+                        <h4 style="color:#fff;">Card 3</h4>
+                    </div>
+
+                    <div class="center card-rollover width-height-100">
+                        <button type="button" class="btn btn-primary cards-button">
+                              <div class="vertical-center">
+                                   <span style="margin-right: 8px;">VIER AREA</span>
+                                   <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </div>
+                      </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9 padding0">
+                <div class="row">
+                    <div class="col-md-4 padding0">
+                        <!--card 3-->
+                        <div class="card-wrapper" style="height: 33.333vh;width: 100%;">
+                            <div class="backgroundScale back-image-transition width-height-100" style="background-color: #887799;"></div>
+                            <div class="center card-content width-height-100">
+                                <h4 style="color:#333;">Card 5</h4>
+                            </div>
+
+                            <div class="center card-rollover1 width-height-100">
+                                <button type="button" class="btn btn-primary cards-button">
+                              <div class="vertical-center">
+                                   <span style="margin-right: 8px;">VIER AREA</span>
+                                   <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </div>
+                             </button>
+                            </div>
+                        </div>
+
+                        <!--card 4-->
+                        <div class="card-wrapper" style="height: 33.333vh;width: 100%;">
+                            <div class="backgroundScale back-image-transition width-height-100" style="background-image: url('assets/content/images/home/5.jpg');"></div>
+                            <div class="center card-content width-height-100">
+                                <h4 style="color:#fff;">Form & User Input</h4>
+                            </div>
+
+                            <div class="center card-rollover1 width-height-100">
+                                <button type="button" class="btn btn-primary cards-button" (click)="gotoForm()">
+                              <div class="vertical-center">
+                                   <span style="margin-right: 8px;">VIER AREA</span>
+                                   <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </div>
+                             </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 padding0">
+                        <!--card 5-->
+                        <div class="card-wrapper" style="height: 66.666vh;width: 100%;">
+                            <div class="backgroundScale back-image-transition width-height-100" style="background-image: url('assets/content/images/home/2.jpg')"></div>
+                            <div class="center card-content width-height-100">
+                                <h4 style="color:#fff;">Images</h4>
+                            </div>
+
+                            <div class="center card-rollover1 width-height-100">
+                                <button type="button" class="btn btn-primary cards-button" (click)="gotoImages()">
+                              <div class="vertical-center">
+                                   <span style="margin-right: 8px;">VIER AREA</span>
+                                   <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </div>
+                             </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 padding0">
+                        <!--card 6-->
+                        <div class="card-wrapper" style="height: 33.333vh;width: 100%;">
+                            <div class="backgroundScale back-image-transition width-height-100" style="background-image: url('assets/content/images/home/3.jpg');"></div>
+                            <div class="center card-content width-height-100">
+                                <h4 style="color:#fff;">Charts</h4>
+                            </div>
+
+                            <div class="center card-rollover width-height-100">
+                                <button type="button" class="btn btn-primary cards-button" (click)="gotoCharts()">
+                              <div class="vertical-center">
+                                   <span style="margin-right: 8px;">VIER AREA</span>
+                                   <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </div>
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 padding0">
+                        <!--card 7-->
+                        <div class="card-wrapper" style="height: 33.333vh;width: 100%;">
+                            <div class="backgroundScale back-image-transition width-height-100" style="background-image: url('assets/content/images/home/8.jpg')"></div>
+                            <div class="center card-content width-height-100">
+                                <h4 style="color:#fff;">Card 7</h4>
+                            </div>
+
+                            <div class="center card-rollover1 width-height-100">
+                                <button type="button" class="btn btn-primary cards-button">
+                              <div class="vertical-center">
+                                   <span style="margin-right: 8px;">VIER AREA</span>
+                                   <i class="fa fa-angle-right" aria-hidden="true"></i>
+                              </div>
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--carousel-->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="assets/content/images/home/carousel-6.jpg" alt="Random first slide" style="height: 100vh;width: 100%;">
+                    <div class="carousel-caption">
+                        <h3>First slide label</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/content/images/home/carousel-8.jpg" alt="Random second slide" style="height: 100vh;width: 100%;">
+                    <div class="carousel-caption">
+                        <h3>Second slide label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/content/images/home/carousel-7.jpg" alt="Random third slide" style="height: 100vh;width: 100%;">
+                    <div class="carousel-caption">
+                        <h3>Third slide label</h3>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+        </div>
+
+        <site-footer></site-footer>
+
+    </div>
+</div>

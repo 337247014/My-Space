@@ -1,0 +1,123 @@
+.width-height-100{
+    width: 100%;
+    height: 100%;
+}
+
+/*home header*/
+.circle-phone{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.circle-phone-inner{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.8;
+    background-color:#ff7a00;
+    display: none;
+}
+
+.fa-phone-color{
+    color: #ff7a00;
+}
+
+.circle-phone:hover .circle-phone-inner {
+    display: inline-flex;
+    /*align-items: center*/
+}
+
+.circle-phone:hover .fa-phone-color{
+    color: #fff;
+}
+/*home header*/
+
+/*cards css*/
+.cards-button{
+    border-color: #ffffff;
+    background-color: #333333;
+    transition: .2s .2s ease-out;
+    border: 2px solid transparent;
+    border-color:#ffffff;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.cards-button:hover{
+    border-color: #ff7a00 !important;
+    background-color: #ff7a00 !important;
+}
+
+.card-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.back-image-transition{
+    position: absolute;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-content{
+    position: absolute;
+    z-index: 2;
+}
+
+.card-rollover{
+    position: absolute;
+    z-index: 3;
+    display: none;
+}
+
+.card-rollover1{
+    position: absolute;
+    z-index: 3;
+    display: none;
+    background-color:rgba(51,51,51,0.8);
+    opacity: 1;
+}
+
+.card-wrapper:hover .back-image-transition{
+    /*-webkit-filter: grayscale(100%) blur(2px);
+    -moz-filter: grayscale(100%) blur(2px);
+    -o-filter: grayscale(100%) blur(2px);
+    filter: grayscale(100%) blur(2px);
+    -ms-filter:grayscale(100%) blur(2px);
+    filter:gray blur(2px);*/
+    /*-webkit-filter: grayscale(60%) blur(2px);
+    -moz-filter: grayscale(60%) blur(2px);
+    -o-filter: grayscale(60%) blur(2px);
+    filter: grayscale(60%) blur(2px);
+    -ms-filter:grayscale(60%) blur(2px);
+    filter:gray blur(2px);*/
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.card-wrapper:hover .card-content{
+    display: none;
+    /*overflow: hidden;*/
+}
+
+.card-wrapper:hover .card-rollover{
+    display:inline-flex;
+}
+
+.card-wrapper:hover .card-rollover1{
+    display:inline-flex;
+}
+
+/*cards css*/
+
+/*carousel*/
+.carousel-caption{
+    bottom:50% !important;
+}
+/*carousel*/
+
+
+

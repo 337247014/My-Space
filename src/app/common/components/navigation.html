@@ -1,0 +1,17 @@
+<div class="navbtn" id="trigger" (click)="addAnimation()" [ngClass]="{'navbtn--active':hasAnimate}">
+    <div class="nav-icon">
+        <span class="burger-bar1"></span>
+        <span class="burger-bar2"></span>
+        <span class="burger-bar3"></span>
+    </div>
+</div>
+
+<div class="animated-quick" [ngClass]="{'slideInLeft isShow':hasAnimate, 'slideOutLeft':!hasAnimate, 'isHidden':!hasClick}"
+ style="position: fixed;z-index: 1999;;height: 100vh;opacity: 0.95;width:400px;background:rgb(255,122,0);" >
+    <nav style="height: 100vh;padding-left:30%;padding-top:6vh;">
+        <a class="nav-link active" href="/home" style="color:#fff;">Home</a><br/>
+        <a class="nav-link" href="/images" style="color:#fff;">Images</a><br/>
+        <a class="nav-link" href="/chart" style="color:#fff;">Charts</a><br/>
+        <a class="nav-link" href="/form" style="color:#fff;">Form</a><br/>
+    </nav>
+</div>

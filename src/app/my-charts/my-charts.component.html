@@ -1,0 +1,110 @@
+<!-- <p>
+  my-charts works!
+</p> -->
+
+<navigation></navigation>
+
+<div class="row">
+    <div class="col-md-12 padding0">
+        <!--header-->
+        <sub-header [backgroundImage]="subHeaderImage" [headerText]="subHeaderText"></sub-header>
+
+        <div class="row">
+            <div class="col-md-12" style="background-color: rgba(0,0,0,0.1);">
+                <!--line chart-->
+                <div class="row paddingAbove">
+                    <div class="col-md-6">
+                        <div>
+                            <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
+                                [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-bottom: 10px">
+                        <table class="table table-responsive table-condensed">
+                            <tr>
+                                <th *ngFor="let label of lineChartLabels">{{label}}</th>
+                            </tr>
+                            <tr *ngFor="let d of lineChartData">
+                                <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+                            </tr>
+                        </table>
+                        <button (click)="randomize()">CLICK</button>
+                    </div>
+                </div>
+
+                <!--bar chart-->
+                <div class="row paddingAbove">
+                    <div class="col-md-6">
+                        <div>
+                            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+                                [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <button (click)="randomizeBar()" style="margin-top:50px;">Update</button>
+                    </div>
+                </div>
+
+                <div class="row paddingAbove">
+                    <!--Doughnut Chart-->
+                    <div class="col-md-6">
+                        <div class="width70">
+                            <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+                                (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                    <!--radar-->
+                    <div class="col-md-6">
+                        <div class="width70">
+                            <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType" (chartHover)="chartHovered($event)"
+                                (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row paddingAbove">
+                    <!--pie-->
+                    <div class="col-md-6">
+                        <div class="width70">
+                            <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)"
+                                (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                    <!--Polar Area-->
+                    <div class="col-md-6">
+                        <div class="width70">
+                            <canvas baseChart [data]="polarAreaChartData" [labels]="polarAreaChartLabels" [legend]="polarAreaLegend" [chartType]="polarAreaChartType"
+                                (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!--dynamic type chart-->
+                <div class="row paddingAbove">
+
+                    <div class="col-md-6">
+                        <div>
+                            <canvas baseChart [data]="lineChartData1" [labels]="lineChartLabels1" [options]="lineChartOptions1" [chartType]="lineChartType1"
+                                (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="width:50%;">
+                            <canvas baseChart [data]="pieChartData1" [labels]="pieChartLabels1" [chartType]="pieChartType1" (chartHover)="chartHovered($event)"
+                                (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center" style="margin-top: 10px;height: 15%">
+                        <button (click)="randomizeType()" style="display: inline-block">change the chart type</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <site-footer></site-footer>
+
+
+
+    </div>
+</div>

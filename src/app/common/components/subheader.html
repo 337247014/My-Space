@@ -1,0 +1,38 @@
+<div class="subHeaderScreen backgroundScale" [style.background]="'url(' + backgroundImage + ')'" style="position:relative;background-color:#e4e4e4;">
+    <!--Logo-->
+    <div class="animated slideInDown" style="text-decoration: none;position: relative; float: left; left: 8%;top: 5%;">
+        <a href="mailto:my@qq.com?subject=This%20is%20the%20subject" style="text-decoration: none;">
+            <div class="backgroundScale circle-phone" style="background-image: url('assets/content/images/me.JPG');">
+                <div class="circle-phone-inner center">
+                    <div>
+                        <i class="fa fa-envelope-open fa-4x fa-phone-color" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!--home button-->
+    <div class="animated slideInDown" style="position: relative; float: right; right: 12%;top: 5%;" placement="bottom" ngbTooltip="Home">
+        <a [routerLink]="['/home']"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <!--sign out button-->
+    <div class="animated slideInDown delay-1" style="position: relative; float: right;right:5%;top: 5%;" placement="bottom" ngbTooltip="Sign out">
+        <a [routerLink]="['/login']"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div style="position:absolute;float:left;left:8%;bottom:10%;">
+        <a [routerLink]="['/home']" class="vertical-center remove-text-decoration" style="color:#fff;"><span style="margin-right:10px;"><i class="fa fa-angle-left" aria-hidden="true"></i></span>BACK</a>
+        <div style="color:#fff;font-size:60px;line-height:60px;"><p>{{headerText}}</p></div>
+    </div>
+
+    <!--scroll down to exploer-->
+    <div class="animated slideInUp" href="#card" style="position: absolute;float: right;bottom: 10%;right: 10%" (click)="gotoScroll()">
+        <div class="vertical-center mouse-focus" style="cursor: pointer;">
+            <i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i>
+            <span style="font-weight: bold;margin-left: 10px;">SCROLL DOWN <br />TO EXPLORE</span>
+        </div>
+    </div>
+
+</div>
